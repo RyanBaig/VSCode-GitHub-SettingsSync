@@ -40,6 +40,8 @@ git clone https://github.com/RyanBaig/VSCode-GitHub-SettingsSync.git
 2. Make a `.env` file.
 
 3. Generate a [GitHub Access Token](https://github.com/settings/tokens) with `delete_repo` and all `repo` perms.
+![Token Perms IMG 1](./screenshots/token-perms1.JPG)
+![Token Perms IMG 2](./screenshots/token-perms2.JPG)
 
 4. Open the Terminal, type `ss login`, provide your GitHub Access Token.
 
