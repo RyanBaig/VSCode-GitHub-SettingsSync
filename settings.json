@@ -1,0 +1,145 @@
+{
+  "workbench.tree.indent": 20,
+  "ruff.args": ["--ignore E501"],
+  "git.allowForcePush": true,
+  "python.autoComplete.extraPaths": [],
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.confirmDelete": false,
+  "python.analysis.extraPaths": [],
+  "codeium.enableConfig": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "xml": true,
+    "ignore": true,
+    "django-html": true,
+    "git-commit": true,
+    "pip-requirements": true,
+    "sqlite": true
+  },
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.autoReplies": {},
+  "livePreview.serverKeepAliveAfterEmbeddedPreviewClose": 1,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "editor.formatOnPaste": true,
+  "npm.keybindingsChangedWarningShown": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editorAssociations": {},
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "window.zoomLevel": -1,
+  "editor.formatOnType": true,
+  "material-icon-theme.files.associations": {},
+  "editor.cursorSmoothCaretAnimation": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.size": "fit",
+  "window.commandCenter": true,
+  "python.globalModuleInstallation": true,
+  "workbench.layoutControl.type": "toggles",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.format.enable": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll": true
+    }
+  },
+  "editor.minimap.enabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "vsce-toolroom.vscode-beautify"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jinja]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "aeschli.vscode-css-formatter"
+  },
+  "editor.codeActionsOnSave": {},
+  "remoteHub.commitDirectlyWarning": "off",
+  "[yml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "black-py.useIntegratedTerminal": true,
+  "terminal.external.windowsExec": "C:\\Program Files\\cmder\\Cmder.exe",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.profiles.windows": {
+    "Cmder": {
+      "path": "C:\\Program Files\\cmder\\Cmder.exe"
+    }
+  },
+  "editor.unicodeHighlight.allowedCharacters": {
+    "×": true
+  },
+  "explorer.compactFolders": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "projectManager.tags": [],
+  "files.exclude": {
+    "**/.git": false
+  },
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "Fira Code",
+  "editor.codeLensFontFamily": "Fira Code",
+  "codeium.enableCodeLens": "hide_x",
+  "json.schemas": [
+    {
+      "fileMatch": ["vercel.json"],
+      "url": "https://openapi.vercel.sh/vercel.json"
+    },
+    {
+      "fileMatch": ["manifest.json"],
+      "url": "https://json.schemastore.org/chrome-manifest"
+    }
+  ],
+  "redhat.telemetry.enabled": false,
+
+  "yaml.schemas": {
+    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+  },
+  "yaml.customTags": [
+    "!ENV scalar",
+    "!ENV sequence",
+    "!relative scalar",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+    "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
+  ],
+  "tabnine.experimentalAutoImports": true,
+  "Codegeex.Privacy": false,
+  "workbench.productIconTheme": "material-product-icons",
+  "files.associations": {
+    "Pipfile": "toml"
+  },
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "Codegeex.Comment.LanguagePreference": "English",
+  "[jinja-html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "comment.block.documentation",
+          "comment.block.documentation punctuation.definition.comment"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  }
+}

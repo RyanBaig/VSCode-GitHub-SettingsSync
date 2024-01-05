@@ -1,0 +1,121 @@
+import json
+import os
+
+import requests
+
+
+def validate_github_token(gh_token):
+    url = "https://api.github.com/user"
+    headers = {"Authorization": f"token {gh_token}"}
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        return True
+    except requests.exceptions.RequestException as e:
+        print(f"Error validating GitHub Token: {e}")
+        return False
+
+def locate_settings_file():
+    # Default settings folder locations for different operating systems
+    default_folders = {
+        "darwin": os.path.expanduser("~/Library/Application Support/Code/User"),
+        "linux": os.path.expanduser("~/.config/Code/User"),
+        "win32": os.path.join(os.environ["APPDATA"], "Code/User"),
+    }
+    # Get the user's platform
+    platform = os.sys.platform
+    # Check if the platform is in the default_folders dictionary
+    if platform in default_folders:
+        vscode_settings_folder = default_folders[platform]
+        # Check if the settings folder exists
+        if os.path.exists(vscode_settings_folder):
+            settings_file_path = os.path.join(
+                vscode_settings_folder, "settings.json"
+            )
+            # Check if settings.json exists
+            if os.path.exists(settings_file_path):
+                with open(settings_file_path) as settings_file:
+                    content = settings_file.read()
+                return content
+    return None
+
+def get_extension_info(extension_path):
+    fields_file_path = os.path.join(extension_path, "package.json")
+    try:
+        if os.path.exists(fields_file_path):
+            with open(
+                fields_file_path, "r", encoding="utf-8", errors="ignore"
+            ) as fields_file:
+                try:
+                    fields_data = json.load(fields_file)
+                    # Check the type of the 'repository' field
+                    if isinstance(fields_data.get("repository"), dict):
+                        repo_url = fields_data["repository"].get("url", "N/A")
+                    else:
+                        repo_url = fields_data.get("repository", "N/A")
+                    return {
+                        "version": fields_data.get("version", "N/A"),
+                        "publisher": fields_data.get("publisher", "N/A"),
+                        "description": fields_data.get("description", "N/A"),
+                        "repository": repo_url,
+                        "categories": fields_data.get("categories", []),
+                    }
+                except json.JSONDecodeError as json_error:
+                    print(
+                        f"Error decoding JSON in {fields_file_path}: {json_error}"
+                    )
+                    return {
+                        "version": "N/A",
+                        "publisher": "N/A",
+                        "description": "N/A",
+                        "repository": "N/A",
+                        "categories": [],
+                    }
+        else:
+            return {
+                "version": "N/A",
+                "publisher": "N/A",
+                "description": "N/A",
+                "repository": "N/A",
+                "categories": [],
+            }
+    except Exception as e:
+        print(f"Error processing {fields_file_path}: {e}")
+        return {
+            "version": "N/A",
+            "publisher": "N/A",
+            "description": "N/A",
+            "repository": "N/A",
+            "categories": [],
+        }
+        
+def extract_extensions_info():
+    extensions_folder = os.path.join(
+        os.environ["USERPROFILE"], ".vscode", "extensions"
+    )
+    try:
+        if os.path.exists(extensions_folder):
+            extensions_info = {}
+            for extension_folder in os.listdir(extensions_folder):
+                extension_path = os.path.join(extensions_folder, extension_folder)
+                # Check if the entry in the folder is a directory (extension)
+                if os.path.isdir(extension_path):
+                    extension_info = get_extension_info(
+                        extension_path
+                    )
+                    extensions_info[extension_folder] = extension_info
+            # Output the extensions information to extensions-list.json
+            with open(
+                "extensions-list.json", "w", encoding="utf-8"
+            ) as extensions_file:
+                json.dump(
+                    extensions_info, extensions_file, indent=2, ensure_ascii=False
+                )
+            print(
+                "Extensions information gathered and saved to extensions-list.json."
+            )
+        else:
+            print("Error: Extensions folder not found.")
+    except Exception as e:
+        print(f"Error extracting extensions information: {e}")
+        

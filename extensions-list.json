@@ -1,0 +1,620 @@
+{
+  "aaron-bond.better-comments-3.0.2": {
+    "version": "3.0.2",
+    "publisher": "aaron-bond",
+    "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
+    "repository": "https://github.com/aaron-bond/better-comments",
+    "categories": [
+      "Formatters"
+    ]
+  },
+  "adpyke.codesnap-1.3.4": {
+    "version": "1.3.4",
+    "publisher": "adpyke",
+    "description": "📷 Take beautiful screenshots of your code",
+    "repository": "https://github.com/kufii/CodeSnap",
+    "categories": [
+      "Other"
+    ]
+  },
+  "aeschli.vscode-css-formatter-1.0.2": {
+    "version": "1.0.2",
+    "publisher": "aeschli",
+    "description": "Formatter for CSS",
+    "repository": "https://github.com/aeschli/vscode-css-formatter",
+    "categories": [
+      "Formatters"
+    ]
+  },
+  "alefragnani.project-manager-12.7.0": {
+    "version": "12.7.0",
+    "publisher": "alefragnani",
+    "description": "Easily switch between projects",
+    "repository": "https://github.com/alefragnani/vscode-project-manager.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "alexcvzz.vscode-sqlite-0.14.1": {
+    "version": "0.14.1",
+    "publisher": "alexcvzz",
+    "description": "Explore and query SQLite databases.",
+    "repository": "https://github.com/AlexCovizzi/vscode-sqlite",
+    "categories": [
+      "Other"
+    ]
+  },
+  "aminer.codegeex-2.2.6": {
+    "version": "2.2.6",
+    "publisher": "AMiner",
+    "description": "CodeGeeX is an AI-based coding assistant, which can suggest code in the current or following lines.  It is powered by a large-scale multilingual code generation model with 13 billion parameters, pretrained on a large code corpus of more than 20 programming languages.",
+    "repository": "https://github.com/THUDM/CodeGeeX2",
+    "categories": [
+      "Programming Languages",
+      "Snippets",
+      "Machine Learning",
+      "Other"
+    ]
+  },
+  "analytic-signal.preview-mp4-0.0.1": {
+    "version": "0.0.1",
+    "publisher": "analytic-signal",
+    "description": "Preview MPEG-4 (.mp4) video files in VSCode.",
+    "repository": "N/A",
+    "categories": [
+      "Other"
+    ]
+  },
+  "arjun.swagger-viewer-3.1.2": {
+    "version": "3.1.2",
+    "publisher": "Arjun",
+    "description": "Swagger Viewer lets you preview and validate Swagger 2.0 and OpenAPI files as you type in Visual Studio Code.",
+    "repository": "https://github.com/arjun-g/vs-swagger-viewer.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "ayushsinghal.code-mate-2.6.5": {
+    "version": "2.6.5",
+    "publisher": "AyushSinghal",
+    "description": "CodeMate is an AI programming assistant that helps you write better code. It helps you fix errors, debug code, optimise code, review code, and more. It works with Python, C++, C, Java, Javascript, Typescript, Ruby & all major languages. Try it out for free!.",
+    "repository": "https://github.com/CodeMateAI/VSCode-extension.git",
+    "categories": [
+      "Linters",
+      "Programming Languages",
+      "Debuggers",
+      "Extension Packs",
+      "Machine Learning"
+    ]
+  },
+  "bibhasdn.django-html-1.3.0": {
+    "version": "1.3.0",
+    "publisher": "bibhasdn",
+    "description": "Django template language support for Visual Studio Code",
+    "repository": "https://github.com/iambibhas/vscode-django-template.git",
+    "categories": [
+      "Languages",
+      "Snippets",
+      "Linters"
+    ]
+  },
+  "bierner.markdown-preview-github-styles-2.0.3": {
+    "version": "2.0.3",
+    "publisher": "bierner",
+    "description": "Changes VS Code's built-in markdown preview to match Github's style",
+    "repository": "https://github.com/mjbvz/vscode-github-markdown-preview-style.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "biswa.awesome-appwrite-snippets-0.10.0": {
+    "version": "0.10.0",
+    "publisher": "Biswa",
+    "description": "Awesome Appwrite Snippets is a collection snippets and shortcuts of commonly used Appwrite APIs ",
+    "repository": "https://github.com/2002Bishwajeet/awesome-appwrite-snippets.git",
+    "categories": [
+      "Snippets"
+    ]
+  },
+  "charliermarsh.ruff-2023.12.0-win32-x64": {
+    "version": "2023.12.0",
+    "publisher": "charliermarsh",
+    "description": "A Visual Studio Code extension with support for the Ruff linter.",
+    "repository": "https://github.com/charliermarsh/vscode-ruff.git",
+    "categories": [
+      "Programming Languages",
+      "Linters"
+    ]
+  },
+  "christian-kohler.npm-intellisense-1.4.5": {
+    "version": "1.4.5",
+    "publisher": "christian-kohler",
+    "description": "Visual Studio Code plugin that autocompletes npm modules in import statements",
+    "repository": "https://github.com/ChristianKohler/NpmIntellisense.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "christian-kohler.path-intellisense-2.8.5": {
+    "version": "2.8.5",
+    "publisher": "christian-kohler",
+    "description": "Visual Studio Code plugin that autocompletes filenames",
+    "repository": "https://github.com/ChristianKohler/PathIntellisense.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "codeium.codeium-1.4.27": {
+    "version": "1.4.27",
+    "publisher": "Codeium",
+    "description": "The modern coding superpower: free AI code acceleration plugin for your favorite languages. Type less. Code more. Ship faster.",
+    "repository": "N/A",
+    "categories": [
+      "Machine Learning",
+      "Programming Languages",
+      "Snippets"
+    ]
+  },
+  "codeium.codeium-1.6.16": {
+    "version": "1.6.16",
+    "publisher": "Codeium",
+    "description": "The modern coding superpower: free AI code acceleration plugin for your favorite languages. Type less. Code more. Ship faster.",
+    "repository": "N/A",
+    "categories": [
+      "Machine Learning",
+      "Programming Languages",
+      "Snippets"
+    ]
+  },
+  "dbaeumer.vscode-eslint-2.4.2": {
+    "version": "2.4.2",
+    "publisher": "dbaeumer",
+    "description": "Integrates ESLint JavaScript into VS Code.",
+    "repository": "https://github.com/Microsoft/vscode-eslint.git",
+    "categories": [
+      "Programming Languages",
+      "Linters"
+    ]
+  },
+  "dongli.python-preview-0.0.4": {
+    "version": "0.0.4",
+    "publisher": "dongli",
+    "description": "%description%",
+    "repository": "https://github.com/dongli0x00/python-preview",
+    "categories": [
+      "Programming Languages",
+      "Debuggers"
+    ]
+  },
+  "eamodio.gitlens-12.2.2": {
+    "version": "12.2.2",
+    "publisher": "eamodio",
+    "description": "Supercharge Git within VS Code — Visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more",
+    "repository": "https://github.com/gitkraken/vscode-gitlens.git",
+    "categories": [
+      "Other",
+      "SCM Providers"
+    ]
+  },
+  "ecmel.vscode-html-css-2.0.6": {
+    "version": "2.0.6",
+    "publisher": "ecmel",
+    "description": "CSS Intellisense for HTML",
+    "repository": "https://github.com/ecmel/vscode-html-css.git",
+    "categories": [
+      "Programming Languages",
+      "Other"
+    ]
+  },
+  "eg2.vscode-npm-script-0.3.29": {
+    "version": "0.3.29",
+    "publisher": "eg2",
+    "description": "npm support for VS Code",
+    "repository": "https://github.com/Microsoft/vscode-npm-scripts.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "esbenp.prettier-vscode-10.1.0": {
+    "version": "10.1.0",
+    "publisher": "esbenp",
+    "description": "Code formatter using prettier",
+    "repository": "https://github.com/prettier/prettier-vscode.git",
+    "categories": [
+      "Formatters"
+    ]
+  },
+  "formulahendry.auto-rename-tag-0.1.10": {
+    "version": "0.1.10",
+    "publisher": "formulahendry",
+    "description": "Auto rename paired HTML/XML tag",
+    "repository": "https://github.com/formulahendry/vscode-auto-rename-tag.git",
+    "categories": [
+      "Other",
+      "Programming Languages"
+    ]
+  },
+  "github.remotehub-0.44.0": {
+    "version": "0.44.0",
+    "publisher": "GitHub",
+    "description": "%description%",
+    "repository": "https://github.com/microsoft/vscode-remote-repositories-github.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "grapecity.gc-excelviewer-4.2.58": {
+    "version": "4.2.58",
+    "publisher": "GrapeCity",
+    "description": "Edit Excel spreadsheets and CSV files in Visual Studio Code and VS Code for the Web.",
+    "repository": "https://github.com/wijmo/gc-excelviewer.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "gruntfuggly.todo-tree-0.0.218": {
+    "version": "0.0.218",
+    "publisher": "Gruntfuggly",
+    "description": "Show TODO, FIXME, etc. comment tags in a tree view",
+    "repository": "https://github.com/Gruntfuggly/todo-tree",
+    "categories": [
+      "Other"
+    ]
+  },
+  "idleberg.icon-fonts-2.5.4": {
+    "version": "2.5.4",
+    "publisher": "idleberg",
+    "description": "Snippets for popular icon fonts such as Font Awesome, Ionicons, Glyphicons, Octicons, Material Design Icons and many more!",
+    "repository": "https://github.com/idleberg/vscode-icon-fonts",
+    "categories": [
+      "Snippets"
+    ]
+  },
+  "jasonnutter.search-node-modules-1.3.0": {
+    "version": "1.3.0",
+    "publisher": "jasonnutter",
+    "description": "Quickly search the node_modules folder.",
+    "repository": "https://github.com/jasonnutter/search-node-modules",
+    "categories": [
+      "Other"
+    ]
+  },
+  "lacroixdavid1.vscode-format-context-menu-1.0.4": {
+    "version": "1.0.4",
+    "publisher": "lacroixdavid1",
+    "description": "VSCode extension to format multiple files with right click context menu",
+    "repository": "https://github.com/lacroixdavid1/vscode-format-context-menu.git",
+    "categories": [
+      "Other",
+      "Formatters"
+    ]
+  },
+  "mikoz.black-py-1.0.3": {
+    "version": "1.0.3",
+    "publisher": "mikoz",
+    "description": "Format Python code with black.",
+    "repository": "https://github.com/34j/vscode-black.git",
+    "categories": [
+      "Formatters"
+    ]
+  },
+  "mohd-akram.vscode-html-format-0.0.5": {
+    "version": "0.0.5",
+    "publisher": "mohd-akram",
+    "description": "Format HTML documents.",
+    "repository": "https://github.com/mohd-akram/vscode-html-format.git",
+    "categories": [
+      "Formatters"
+    ]
+  },
+  "ms-python.black-formatter-2022.4.0": {
+    "version": "2022.4.0",
+    "publisher": "ms-python",
+    "description": "%extension.description%",
+    "repository": "https://github.com/microsoft/vscode-black-formatter.git",
+    "categories": [
+      "Programming Languages",
+      "Formatters"
+    ]
+  },
+  "ms-python.python-2022.16.1": {
+    "version": "2022.16.1",
+    "publisher": "ms-python",
+    "description": "IntelliSense (Pylance), Linting, Debugging (multi-threaded, remote), Jupyter Notebooks, code formatting, refactoring, unit tests, and more.",
+    "repository": "https://github.com/Microsoft/vscode-python",
+    "categories": [
+      "Programming Languages",
+      "Debuggers",
+      "Linters",
+      "Formatters",
+      "Other",
+      "Data Science",
+      "Machine Learning",
+      "Notebooks"
+    ]
+  },
+  "ms-python.vscode-pylance-2023.1.10": {
+    "version": "2023.1.10",
+    "publisher": "ms-python",
+    "description": "A performant, feature-rich language server for Python in VS Code",
+    "repository": "https://github.com/microsoft/pylance-release",
+    "categories": [
+      "Programming Languages"
+    ]
+  },
+  "ms-vscode.live-server-0.4.1": {
+    "version": "0.4.1",
+    "publisher": "ms-vscode",
+    "description": "Hosts a local server in your workspace for you to preview your webpages on.",
+    "repository": "https://github.com/microsoft/vscode-livepreview",
+    "categories": [
+      "Other"
+    ]
+  },
+  "ms-vscode.remote-repositories-0.18.0": {
+    "version": "0.18.0",
+    "publisher": "ms-vscode",
+    "description": "%description%",
+    "repository": "https://github.com/microsoft/vscode-remote-repositories-github.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "nucllear.vscode-extension-auto-import-1.4.3": {
+    "version": "1.4.3",
+    "publisher": "NuclleaR",
+    "description": "Automatically finds, parses and provides code actions and code completion for all available imports. Works with JavaScript and TypeScript. [Forked]",
+    "repository": "N/A",
+    "categories": [
+      "Other"
+    ]
+  },
+  "pkief.material-icon-theme-4.32.0": {
+    "version": "4.32.0",
+    "publisher": "PKief",
+    "description": "Material Design Icons for Visual Studio Code",
+    "repository": "https://github.com/PKief/vscode-material-icon-theme.git",
+    "categories": [
+      "Themes"
+    ]
+  },
+  "pkief.material-product-icons-1.7.0": {
+    "version": "1.7.0",
+    "publisher": "PKief",
+    "description": "Product Icon Theme with Material Icons for VS Code",
+    "repository": "https://github.com/PKief/vscode-material-product-icons.git",
+    "categories": [
+      "Themes"
+    ]
+  },
+  "pranaygp.vscode-css-peek-4.4.1": {
+    "version": "4.4.1",
+    "publisher": "pranaygp",
+    "description": "Allow peeking to css ID and class strings as definitions from html files to respective CSS. Allows peek and goto definition.",
+    "repository": "https://github.com/pranaygp/vscode-css-peek",
+    "categories": [
+      "Programming Languages"
+    ]
+  },
+  "rangav.vscode-thunder-client-2.4.3": {
+    "version": "2.4.3",
+    "publisher": "rangav",
+    "description": "Lightweight Rest API Client for VS Code",
+    "repository": "https://github.com/rangav/thunder-client-support",
+    "categories": [
+      "Programming Languages",
+      "Snippets",
+      "Testing"
+    ]
+  },
+  "redhat.vscode-yaml-1.14.0": {
+    "version": "1.14.0",
+    "publisher": "redhat",
+    "description": "YAML Language Support by Red Hat, with built-in Kubernetes syntax support",
+    "repository": "https://github.com/redhat-developer/vscode-yaml",
+    "categories": [
+      "Programming Languages",
+      "Linters",
+      "Snippets",
+      "Formatters"
+    ]
+  },
+  "samuelcolvin.jinjahtml-0.20.0": {
+    "version": "0.20.0",
+    "publisher": "samuelcolvin",
+    "description": "Syntax highlighting for jinja(2) including HTML, Markdown, YAML, Ruby and LaTeX templates",
+    "repository": "https://github.com/samuelcolvin/jinjahtml-vscode.git",
+    "categories": [
+      "Programming Languages"
+    ]
+  },
+  "shd101wyy.markdown-preview-enhanced-0.8.11": {
+    "version": "0.8.11",
+    "publisher": "shd101wyy",
+    "description": "%description%",
+    "repository": "https://github.com/shd101wyy/vscode-markdown-preview-enhanced",
+    "categories": [
+      "Other"
+    ]
+  },
+  "simonsiefke.svg-preview-2.8.3": {
+    "version": "2.8.3",
+    "publisher": "SimonSiefke",
+    "description": "Preview for Svg files",
+    "repository": "https://github.com/SimonSiefke/vscode-svg-preview.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "slevesque.vscode-zipexplorer-0.3.1": {
+    "version": "0.3.1",
+    "publisher": "slevesque",
+    "description": "Display the content of a Zip file in a Tree Explorer",
+    "repository": "https://github.com/stef-levesque/vscode-zipexplorer.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "sukumo28.wav-preview-2.0.5": {
+    "version": "2.0.5",
+    "publisher": "sukumo28",
+    "description": "play & preview audio file in VS Code. (wav,mp3,ogg,aac,flac,...etc)",
+    "repository": "https://github.com/sukumo28/vscode-audio-preview.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "tamasfe.even-better-toml-0.19.2": {
+    "version": "0.19.2",
+    "publisher": "tamasfe",
+    "description": "Fully-featured TOML support",
+    "repository": "https://github.com/tamasfe/taplo",
+    "categories": [
+      "Programming Languages",
+      "Linters",
+      "Formatters",
+      "Other"
+    ]
+  },
+  "tomoki1207.pdf-1.2.2": {
+    "version": "1.2.2",
+    "publisher": "tomoki1207",
+    "description": "Display pdf file in VSCode.",
+    "repository": "https://github.com/tomoki1207/vscode-pdfviewer.git",
+    "categories": [
+      "Programming Languages"
+    ]
+  },
+  "ultram4rine.vscode-choosealicense-0.9.4": {
+    "version": "0.9.4",
+    "publisher": "ultram4rine",
+    "description": "Choose a license for your project in VS Code",
+    "repository": "https://github.com/ultram4rine/vscode-choosealicense",
+    "categories": [
+      "Other"
+    ]
+  },
+  "usernamehw.errorlens-3.8.0": {
+    "version": "3.8.0",
+    "publisher": "usernamehw",
+    "description": "Improve highlighting of errors, warnings and other language diagnostics.",
+    "repository": "https://github.com/usernamehw/vscode-error-lens",
+    "categories": [
+      "Other"
+    ]
+  },
+  "vincaslt.highlight-matching-tag-0.11.0": {
+    "version": "0.11.0",
+    "publisher": "vincaslt",
+    "description": "Highlights matching closing and opening tags",
+    "repository": "https://github.com/vincaslt/vscode-highlight-matching-tag",
+    "categories": [
+      "Other"
+    ]
+  },
+  "visualstudioexptteam.intellicode-api-usage-examples-0.2.8": {
+    "version": "0.2.8",
+    "publisher": "VisualStudioExptTeam",
+    "description": "%extension.description%",
+    "repository": "https://github.com/MicrosoftDocs/intellicode",
+    "categories": [
+      "Other"
+    ]
+  },
+  "visualstudioexptteam.vscodeintellicode-1.2.30": {
+    "version": "1.2.30",
+    "publisher": "VisualStudioExptTeam",
+    "description": "%extension.description%",
+    "repository": "https://github.com/MicrosoftDocs/intellicode",
+    "categories": [
+      "Other"
+    ]
+  },
+  "vsce-toolroom.vscode-beautify-1.5.12": {
+    "version": "1.5.12",
+    "publisher": "vsce-toolroom",
+    "description": "Beautify code in place for VS Code",
+    "repository": "https://github.com/vsce-toolroom/vscode-beautify",
+    "categories": [
+      "Other",
+      "Programming Languages",
+      "Formatters"
+    ]
+  },
+  "waderyan.nodejs-extension-pack-0.1.9": {
+    "version": "0.1.9",
+    "publisher": "waderyan",
+    "description": "Popular VS Code extensions for Node.js development.",
+    "repository": "https://github.com/waderyan/nodejs-extension-pack",
+    "categories": [
+      "Extension Packs"
+    ]
+  },
+  "wakatime.vscode-wakatime-24.4.0": {
+    "version": "24.4.0",
+    "publisher": "WakaTime",
+    "description": "Metrics, insights, and time tracking automatically generated from your programming activity.",
+    "repository": "https://github.com/wakatime/vscode-wakatime.git",
+    "categories": [
+      "Visualization",
+      "Education"
+    ]
+  },
+  "xabikos.javascriptsnippets-1.8.0": {
+    "version": "1.8.0",
+    "publisher": "xabikos",
+    "description": "Code snippets for JavaScript in ES6 syntax",
+    "repository": "https://github.com/xabikos/vscode-javascript",
+    "categories": [
+      "Snippets"
+    ]
+  },
+  "yandeu.five-server-0.3.1": {
+    "version": "0.3.1",
+    "publisher": "yandeu",
+    "description": "A better Live Server with instant updates, highlights and some PHP support.",
+    "repository": "https://github.com/yandeu/five-server-vscode.git",
+    "categories": [
+      "Other"
+    ]
+  },
+  "yzhang.markdown-all-in-one-3.5.1": {
+    "version": "3.5.1",
+    "publisher": "yzhang",
+    "description": "%ext.description%",
+    "repository": "https://github.com/yzhang-gh/vscode-markdown",
+    "categories": [
+      "Programming Languages",
+      "Formatters",
+      "Other"
+    ]
+  },
+  "zeshuaro.vscode-python-poetry-0.3.4": {
+    "version": "0.3.4",
+    "publisher": "zeshuaro",
+    "description": "Python Poetry support for VS Code to manage Poetry commands",
+    "repository": "https://github.com/zeshuaro/vscode-poetry",
+    "categories": [
+      "Other"
+    ]
+  },
+  "zhuangtongfa.material-theme-3.15.6": {
+    "version": "3.15.6",
+    "publisher": "zhuangtongfa",
+    "description": "Atom‘s iconic One Dark theme for Visual Studio Code",
+    "repository": "https://github.com/Binaryify/OneDark-Pro",
+    "categories": [
+      "Themes"
+    ]
+  },
+  "zignd.html-css-class-completion-1.20.0": {
+    "version": "1.20.0",
+    "publisher": "Zignd",
+    "description": "CSS class name completion for the HTML class attribute based on the definitions found in your workspace.",
+    "repository": "https://github.com/Zignd/HTML-CSS-Class-Completion",
+    "categories": [
+      "Programming Languages",
+      "Other"
+    ]
+  }
+}
