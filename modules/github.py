@@ -135,7 +135,6 @@ def send_files_to_repo():
     except requests.exceptions.RequestException as e:
         print(f"Error during sync: {e}")
 
-
 def get_files_from_repo():
     # Load GitHub token from environment variables
     github_token = get_var("GH_TOKEN")
