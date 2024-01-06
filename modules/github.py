@@ -64,7 +64,7 @@ def create_repo():
         print(f"Unexpected error: {e}")
         return 500  # You can choose an appropriate status code for unexpected errors
 
-def sync_repo():
+def send_files_to_repo():
     # Assuming settings.json and extensions-list.json are in the same directory as this script
     settings_content = locate_settings_file()
     settings_file_path = os.path.abspath("./settings.json")
@@ -113,7 +113,7 @@ def sync_repo():
 
             response = requests.put(target_url, headers=headers, json=body)
             response.raise_for_status()
-
+            os.remove(file_path)
             print(f"File {file_path} uploaded successfully!")
 
         # Function to get the SHA of an existing file
@@ -134,4 +134,49 @@ def sync_repo():
 
     except requests.exceptions.RequestException as e:
         print(f"Error during sync: {e}")
-    
+
+
+def get_files_from_repo():
+    # Load GitHub token from environment variables
+    github_token = get_var("GH_TOKEN")
+
+    # Repository details
+    repo_owner = requests.get("https://api.github.com/user", headers={"Authorization": f"token {github_token}"}).json()["login"]
+    repo_name = f"{repo_owner}-VSCode-Settings-Sync"  # Replace with your repository name
+
+    # GitHub API URLs
+    repo_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/"
+    settings_url = repo_url + "settings.json"
+    extensions_url = repo_url + "extensions-list.json"
+
+    # Headers with authorization
+    headers = {
+        "Authorization": f"Bearer {github_token}",
+        "Accept": "application/vnd.github.v3+json",
+    }
+
+    def download_file(file_url, target_path):
+        
+        response = requests.get(file_url, headers=headers)
+        response.raise_for_status()
+
+        # Decode content and write to the target file
+        content = base64.b64decode(response.json()["content"]).decode("utf-8")
+        with open(target_path, "w") as file:
+            file.write(content.replace("\U0001f4f7", ""))
+
+        print(f"File downloaded successfully to {target_path}")
+    try:
+        # Specify dynamic target paths for each file
+        # what is the path to vscode settings.json? ans: 
+        settings_target_path = os.path.join(os.environ["APPDATA"], "Code", "User", "settings.json")
+        extensions_target_path = os.path.join(os.path.expanduser("~"), "Desktop", "extensions-list.json")
+
+        # Download settings.json
+        download_file(settings_url, settings_target_path)
+
+        # Download extensions-list.json to the user's desktop
+        download_file(extensions_url, extensions_target_path)
+
+    except requests.exceptions.RequestException as e:
+        print(f"Error during file retrieval: {e}")

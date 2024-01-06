@@ -48,12 +48,17 @@ def get_extension_info(extension_path):
             ) as fields_file:
                 try:
                     fields_data = json.load(fields_file)
+                    # Combine publisher and name to form the extension ID
+                    extension_id = f"{fields_data.get('publisher', 'N/A')}.{fields_data.get('name', 'N/A')}"
                     # Check the type of the 'repository' field
                     if isinstance(fields_data.get("repository"), dict):
                         repo_url = fields_data["repository"].get("url", "N/A")
                     else:
                         repo_url = fields_data.get("repository", "N/A")
                     return {
+                        # I want the url key to have the url of the extension's page on vscode marketplace. I just need to know how I can get the extension identifier 
+                        
+                        "url": f"https://marketplace.visualstudio.com/items?itemName={extension_id}",
                         "version": fields_data.get("version", "N/A"),
                         "publisher": fields_data.get("publisher", "N/A"),
                         "description": fields_data.get("description", "N/A"),

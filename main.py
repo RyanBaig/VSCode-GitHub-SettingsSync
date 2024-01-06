@@ -2,9 +2,9 @@ from getpass import getpass
 
 import fire
 
-from modules.github import create_repo, sync_repo
-from modules.variables import get_var, put_var
-from modules.vscode import locate_settings_file, validate_github_token
+from modules.github import create_repo, send_files_to_repo, get_files_from_repo
+from modules.variables import put_var
+from modules.vscode import validate_github_token
 
 
 class CLICommands:
@@ -44,12 +44,17 @@ class CLICommands:
 
 
 
-    def sync(self):
+    def sync_send(self):
         create_repo_process = create_repo()
         if create_repo_process == 422:
             print("Repository Already Created, Syncing...")
-        sync_repo()
+        send_files_to_repo()
 
+    def sync_get(self):
+        create_repo_process = create_repo()
+        if create_repo_process == 422:
+            print("Repository Already Created, Syncing...")
+        get_files_from_repo()
 
 if __name__ == "__main__":
     fire.Fire(CLICommands, name="ss")
