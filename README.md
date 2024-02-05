@@ -38,12 +38,11 @@ To Use/Install this project, follow the given steps:
 git clone https://github.com/RyanBaig/VSCode-Settings-Sync.git
 ```
 
-2. Make a `.env` file.
 
-3. Generate a [GitHub Access Token](https://github.com/settings/tokens) with `delete_repo` and all `repo` perms.
+1. Generate a [GitHub Access Token](https://github.com/settings/tokens) with `delete_repo` and all `repo` perms.
 ![Token Perms IMG 1](./screenshots/token-perms1.JPG)
 ![Token Perms IMG 2](./screenshots/token-perms2.JPG)
 
-4. Open the Terminal, type `ss login`, provide your GitHub Access Token.
+1. Open the Terminal, type `ss login`, provide your GitHub Access Token.
 
-5. To Sync your settings and extensions to the repository, type `ss sync-send` to save your current settings to the repository or use `ss sync-get` to get the settings from the repository.
+2. To Sync your settings and extensions to the repository, type `ss sync-send` to save your current settings to the repository or use `ss sync-get` to get the settings from the repository.
