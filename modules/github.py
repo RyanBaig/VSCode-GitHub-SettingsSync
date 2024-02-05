@@ -12,6 +12,9 @@ class GitHub:
     Base class for GitHub-related actions.
     """
     def create_repo() -> int:
+        """
+        Creates a new GitHub repository for syncing.
+        """
         url = "https://api.github.com/user/repos"
         token = Variables.get_var("gh_token")
         
@@ -80,6 +83,7 @@ class GitHub:
             return 500  # You can choose an appropriate status code for unexpected errors
 
     def send_files_to_repo() -> None:
+        """Send setting files (settings.json, extensions-list.json, keybindings.json) to the rpeository."""
         # Put settings.json and extensions-list.json into same dir as script
         # 1. Settings
         settings_content = VSCode.locate_settings_file()
@@ -119,6 +123,7 @@ class GitHub:
         try:
             # Function to upload a file to GitHub repository
             def upload_file(file_path: str, target_url: str) -> None:
+                """Helper function for `send_files_to_repo` to upload files."""
                 with open(file_path, "rb") as file:
                     content = file.read()
                     encoded_content = base64.b64encode(content).decode("utf-8")
@@ -142,6 +147,7 @@ class GitHub:
 
             # Function to get the SHA of an existing file
             def get_existing_file_sha(target_url: str) -> Union[str, None]:
+                """Get the SHA for the existing setting files."""
                 response = requests.get(target_url, headers=headers)
                 
                 if response.status_code == 200:
@@ -163,6 +169,7 @@ class GitHub:
             print(f"Error during sync: {e}")
 
     def get_files_from_repo() -> None:
+        """Get setting files (settings.json, extensions-list.json, keybindings.json) from the rpeository."""
         # Load GitHub token from environment variables
         github_token = Variables.get_var("GH_TOKEN")
 
@@ -185,6 +192,7 @@ class GitHub:
             }
 
             def download_file(file_url: str, target_path: str) -> None:
+                """Helper function for `get_files_from_repo` to download files."""
                 response = requests.get(file_url, headers=headers)
                 response.raise_for_status()
 

@@ -10,16 +10,6 @@ class VSCode:
     def validate_github_token(gh_token: str) -> bool:
         """
         Validate a GitHub Access Token.
-
-        Params
-        ---
-            - `gh_token` (str):
-                The GitHub Access Token, required.
-
-        Returns
-        ---
-            - bool:
-                Returns `True` if the token is valid, otherwise returns `False`.
         """
 
         # Set the API endpoint and headers
@@ -37,6 +27,7 @@ class VSCode:
 
 
     def locate_settings_file() -> Union[str, None]:
+        """Locate the settings.json file and return it's contents."""
         # Default settings folder locations for different operating systems
         default_folders = {
             "darwin": os.path.expanduser("~/Library/Application Support/Code/User"),
@@ -61,6 +52,7 @@ class VSCode:
         return None
         
     def locate_keybinds_file() -> Union[str, None]:
+        """Locate the keybindings.json and return it's contents."""
         # Default keybinds folder locations for different operating systems
         default_folders = {
             "darwin": os.path.expanduser("~/Library/Application Support/Code/User"),
@@ -85,6 +77,7 @@ class VSCode:
         return None
 
     def get_extension_info(extension_path: str) -> dict:
+        """Get information about a specific VSCode Extension."""
         fields_file_path = os.path.join(extension_path, "package.json")
         try:
             if os.path.exists(fields_file_path):
@@ -140,6 +133,7 @@ class VSCode:
             }
             
     def extract_extensions_info() -> None:
+        """Extract the User's extensions and save them to the script's dir (extensions-list.json)"""
         extensions_folder = os.path.join(
             os.environ["USERPROFILE"], ".vscode", "extensions"
         )

@@ -5,16 +5,6 @@ class Variables:
     def get_var(var_name: str) -> str:
         """
         Get the value of a variable from the `.env` file.
-
-        Params
-        ---
-            - var_name (str):
-                The name of the Variable, required.
-
-        Returns
-        ---
-            - str:
-                Returns the value of the 
         """
         with open(".env", "r") as env_file:
             for line in env_file:
