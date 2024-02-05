@@ -6,7 +6,8 @@
 
 VSCode-SettingsSync is a Python-based command-line tool designed to streamline the synchronization of Visual Studio Code settings and installed extensions across multiple development environments. The project leverages GitHub as a central repository to store and version control VSCode settings, allowing developers to effortlessly maintain a consistent and personalized development environment.
 
-> [!IMPORTANT] > _Please note, that this **ONLY** syncronizes VSCode Settings and Extensions._
+> [!IMPORTANT]
+ _Please note, that this **ONLY** syncronizes VSCode Settings and Extensions._
 
 ### Key Features:
 
