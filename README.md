@@ -1,14 +1,14 @@
-
 ## Badges
 
-![License](https://badgers.space/github/license/RyanBaig/VSCode-GitHub-SettingsSync/) ![Open Issues](https://badgers.space/github/open-issues/RyanBaig/VSCode-GitHub-SettingsSync)
-## VSCode-GitHub-SettingsSync 
+![License](https://badgers.space/github/license/RyanBaig/VSCode-Settings-Sync/) ![Open Issues](https://badgers.space/github/open-issues/RyanBaig/VSCode-Settings-Sync)
 
-VSCode-GitHub-SettingsSync is a Python-based command-line tool designed to streamline the synchronization of Visual Studio Code settings and installed extensions across multiple development environments. The project leverages GitHub as a central repository to store and version control VSCode settings, allowing developers to effortlessly maintain a consistent and personalized development environment.
-*Please note, that this **ONLY** syncronizes VSCode Settings and Extensions.* 
+## VSCode-Settings-Sync
+
+VSCode-SettingsSync is a Python-based command-line tool designed to streamline the synchronization of Visual Studio Code settings and installed extensions across multiple development environments. The project leverages GitHub as a central repository to store and version control VSCode settings, allowing developers to effortlessly maintain a consistent and personalized development environment.
+
+> [!IMPORTANT] > _Please note, that this **ONLY** syncronizes VSCode Settings and Extensions._
 
 ### Key Features:
-
 
 1. GitHub Integration: Utilizes GitHub repositories to store and synchronize VSCode settings and extensions.
 
@@ -16,9 +16,10 @@ VSCode-GitHub-SettingsSync is a Python-based command-line tool designed to strea
 
 3. Extension Management: Gathers information about installed extensions and syncs the data with the GitHub repository.
 
-4. Secure: Ensures the privacy of sensitive information by using private GitHub repositories and access tokens.
+4. Keybinds Saving: Automatically saves keybinds to the GitHub repository, ensuring they are always up-to-date.
+5. Secure: Ensures the privacy of sensitive information by using private GitHub repositories and access tokens.
 
-5. User-Friendly CLI: Offers a straightforward command-line interface for easy setup and synchronization.
+6. User-Friendly CLI: Offers a straightforward command-line interface for easy setup and synchronization.
 
 ### How to Use:
 
@@ -31,8 +32,9 @@ VSCode-GitHub-SettingsSync is a Python-based command-line tool designed to strea
 To Use/Install this project, follow the given steps:
 
 1. Clone the Repo:
+
 ```bash
-git clone https://github.com/RyanBaig/VSCode-GitHub-SettingsSync.git
+git clone https://github.com/RyanBaig/VSCode-Settings-Sync.git
 ```
 
 2. Make a `.env` file.
@@ -44,4 +46,3 @@ git clone https://github.com/RyanBaig/VSCode-GitHub-SettingsSync.git
 4. Open the Terminal, type `ss login`, provide your GitHub Access Token.
 
 5. To Sync your settings and extensions to the repository, type `ss sync-send` to save your current settings to the repository or use `ss sync-get` to get the settings from the repository.
-    
