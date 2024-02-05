@@ -2,12 +2,10 @@ import base64
 import os
 import time
 from datetime import datetime
-
 import requests
-
 from modules.variables import Variables
 from modules.vscode import VSCode
-
+from typing import Union
 
 class GitHub:
     """
@@ -120,7 +118,7 @@ class GitHub:
 
         try:
             # Function to upload a file to GitHub repository
-            def upload_file(file_path, target_url):
+            def upload_file(file_path: str, target_url: str) -> None:
                 with open(file_path, "rb") as file:
                     content = file.read()
                     encoded_content = base64.b64encode(content).decode("utf-8")
@@ -143,7 +141,7 @@ class GitHub:
                 print(f"File {file_path} uploaded successfully!")
 
             # Function to get the SHA of an existing file
-            def get_existing_file_sha(target_url):
+            def get_existing_file_sha(target_url: str) -> Union[str, None]:
                 response = requests.get(target_url, headers=headers)
                 
                 if response.status_code == 200:
@@ -187,19 +185,26 @@ class GitHub:
             }
 
             def download_file(file_url: str, target_path: str) -> None:
-                
                 response = requests.get(file_url, headers=headers)
                 response.raise_for_status()
 
-                # Decode content and write to the target file
-                content = base64.b64decode(response.json()["content"]).decode("utf-8")
-                with open(target_path, "w") as file:
-                    file.write(content.replace("\U0001f4f7", ""))
+                # Decode content and handle encoding issues
+                try:
+                    content = base64.b64decode(response.json()["content"]).decode("utf-8")
+                except UnicodeDecodeError as e:
+                    print(f"UnicodeDecodeError: {e}")
+                    content = base64.b64decode(response.json()["content"]).decode("utf-8", errors="replace")
+
+                # Write to the target file with utf-8 encoding using writebytes
+                with open(target_path, 'wb') as file:
+                    file.write(content.encode("utf-8"))
 
                 print(f"File downloaded successfully to {target_path}")
+
             try:
                 #  
                 settings_target_path = os.path.join(os.environ["APPDATA"], "Code", "User", "settings.json")
+                # settings_target_path = os.path.abspath("./settings.json")
                 extensions_target_path = os.path.join(os.path.expanduser("~"), "Desktop", "extensions-list.json")
                 keybinds_target_path = os.path.join(os.environ["APPDATA"], "Code", "User", "keybindings.json")
 

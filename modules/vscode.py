@@ -8,8 +8,25 @@ class VSCode:
     Base class for VSCode-related actions.
     """
     def validate_github_token(gh_token: str) -> bool:
+        """
+        Validate a GitHub Access Token.
+
+        Params
+        ---
+            - `gh_token` (str):
+                The GitHub Access Token, required.
+
+        Returns
+        ---
+            - bool:
+                Returns `True` if the token is valid, otherwise returns `False`.
+        """
+
+        # Set the API endpoint and headers
         url = "https://api.github.com/user"
         headers = {"Authorization": f"token {gh_token}"}
+
+        # Make the request
         try:
             response = requests.get(url, headers=headers)
             response.raise_for_status()
@@ -17,6 +34,7 @@ class VSCode:
         except requests.exceptions.RequestException as e:
             print(f"Error validating GitHub Token: {e}")
             return False
+
 
     def locate_settings_file() -> Union[str, None]:
         # Default settings folder locations for different operating systems
