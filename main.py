@@ -12,7 +12,7 @@ class CLICommands:
     def login(self):
         print("Welcome to VSCode-Settings-Sync!")
     
-        if not os.path.exists(os.path.join( [ os.path.abspath("."), ".env" ] )):
+        if not os.path.exists(os.path.join( os.path.abspath("."), ".env" )):
             print("Currently Setting Up Environment Variables...")
             with open(os.path.join( [ os.path.abspath("."), ".env" ] ), "x"):
                 pass
