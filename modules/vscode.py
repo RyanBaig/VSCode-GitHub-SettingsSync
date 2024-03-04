@@ -32,7 +32,7 @@ class VSCode:
         default_folders = {
             "darwin": os.path.expanduser("~/Library/Application Support/Code/User"),
             "linux": os.path.expanduser("~/.config/Code/User"),
-            "win32": os.path.join(os.environ["APPDATA"], "Code/User"),
+            "win32": os.path.join(os.environ["APPDATA"], "Code", "User"),
         }
         # Get the user's platform
         platform = os.sys.platform
@@ -162,4 +162,4 @@ class VSCode:
                 print("Error: Extensions folder not found.")
         except Exception as e:
             print(f"Error extracting extensions information: {e}")
-            
+

@@ -6,6 +6,10 @@ import requests
 from modules.variables import Variables
 from modules.vscode import VSCode
 from typing import Union
+import subprocess
+import json
+import urllib.parse
+from pathlib import Path
 
 class GitHub:
     """
@@ -32,7 +36,7 @@ class GitHub:
         body = {
             "name": repo_name,
             "description": "A repository for storing your VSCode settings",
-            "homepage": f"https://github.com/RyanBaig/VSCode-Settings-Sync",
+            "homepage": "https://github.com/RyanBaig/VSCode-Settings-Sync",
             "private": True,
             "auto_init": True,  # Initialize with a README
         }
@@ -209,12 +213,31 @@ class GitHub:
 
                 print(f"File downloaded successfully to {target_path}")
 
+            def install_extensions_from_list(extension_list_path):
+                with open(extension_list_path, 'r') as file:
+                    extensions_data = json.load(file)
+
+                # Construct a list of extension installation commands
+                extension_commands = []
+                for _, extension_info in extensions_data.items():
+                    extension_url = extension_info['url']
+                    extension_name = urllib.parse.unquote(extension_url.split("itemName=")[-1])
+                    extension_commands.append(f"code --install-extension {extension_name}")
+
+                # Join all commands into a single long command
+                command = " && ".join(extension_commands)
+
+                # Execute the single long command
+                subprocess.run(command, shell=True)
+
             try:
-                #  
-                settings_target_path = os.path.join(os.environ["APPDATA"], "Code", "User", "settings.json")
-                # settings_target_path = os.path.abspath("./settings.json")
-                extensions_target_path = os.path.join(os.path.expanduser("~"), "Desktop", "extensions-list.json")
-                keybinds_target_path = os.path.join(os.environ["APPDATA"], "Code", "User", "keybindings.json")
+                # Determine the user's home directory
+                home_dir = Path.home()
+
+                # Set the paths for settings, extensions, and keybindings
+                settings_target_path = home_dir / ".config" / "Code" / "User" / "settings.json"
+                extensions_target_path = Path.home() / "Desktop" / "extensions-list.json"
+                keybinds_target_path = home_dir / ".config" / "Code" / "User" / "keybindings.json"
 
                 # Download settings.json
                 download_file(settings_url, settings_target_path)
@@ -224,6 +247,9 @@ class GitHub:
 
                 # Download keybinds.json
                 download_file(keybinds_url, keybinds_target_path)
+
+                # Install the VSCode extensions
+                install_extensions_from_list(extensions_target_path)
 
             except requests.exceptions.RequestException as e:
                 print(f"Error during file retrieval: {e}")

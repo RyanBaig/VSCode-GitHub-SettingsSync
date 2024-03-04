@@ -14,7 +14,7 @@ class CLICommands:
     
         if not os.path.exists(os.path.join( os.path.abspath("."), ".env" )):
             print("Currently Setting Up Environment Variables...")
-            with open(os.path.join( os.path.abspath("."), ".env" ), "x"):
+            with open(os.path.join( [ os.path.abspath("."), ".env" ] ), "x"):
                 pass
                 print("Environment Variables Successfully Setup!")
         
