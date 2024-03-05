@@ -15,7 +15,7 @@ class GitHub:
     """
     Base class for GitHub-related actions.
     """
-    def create_repo() -> int:
+    def create_repo(self) -> int:
         """
         Creates a new GitHub repository for syncing.
         """
@@ -58,7 +58,7 @@ class GitHub:
                 print(f"Rate limit exceeded. Reset time: {reset_time}")
                 print("Retrying create_repo process after reset time...")
                 time.sleep(reset_time - int(time.time()))
-                return GitHub.create_repo()  # Return the result of the recursive call
+                return self.create_repo() # Return the result of the recursive call
             else:
                 print(f"Error creating repository. Status code: {r.status_code}")
 
@@ -86,7 +86,7 @@ class GitHub:
             print(f"Unexpected error: {e}")
             return 500  # You can choose an appropriate status code for unexpected errors
 
-    def send_files_to_repo() -> None:
+    def send_files_to_repo(self) -> None:
         """Send setting files (settings.json, extensions-list.json, keybindings.json) to the rpeository."""
         # Put settings.json and extensions-list.json into same dir as script
         # 1. Settings
@@ -172,7 +172,7 @@ class GitHub:
         except requests.exceptions.RequestException as e:
             print(f"Error during sync: {e}")
 
-    def get_files_from_repo() -> None:
+    def get_files_from_repo(self) -> None:
         """Get setting files (settings.json, extensions-list.json, keybindings.json) from the rpeository."""
         # Load GitHub token from environment variables
         github_token = Variables.get_var("GH_TOKEN")
@@ -249,7 +249,7 @@ class GitHub:
                 download_file(keybinds_url, keybinds_target_path)
 
                 # Install the VSCode extensions
-                install_extensions_from_list(extensions_target_path)
+                install_extensions_from_list(extensions_target_path)            
 
             except requests.exceptions.RequestException as e:
                 print(f"Error during file retrieval: {e}")
