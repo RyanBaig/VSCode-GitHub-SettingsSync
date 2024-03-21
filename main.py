@@ -48,8 +48,6 @@ class CLICommands:
         if attempts == max_attempts:
             print(f"Exceeded maximum attempts ({max_attempts}). Exiting.")
 
-
-
     def sync_send(self):
         create_repo_process = GitHub.create_repo()
         if create_repo_process == 422:
