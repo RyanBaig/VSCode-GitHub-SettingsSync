@@ -62,4 +62,3 @@ class CLICommands:
 
 if __name__ == "__main__":
     fire.Fire(CLICommands, name="ss")
-    # GitHubSettingsSync.extract_extensions_info()
