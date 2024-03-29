@@ -7,7 +7,7 @@ class VSCode:
     """
     Base class for VSCode-related actions.
     """
-    def validate_github_token(self, gh_token: str) -> bool:
+    def validate_github_token(gh_token: str) -> bool:
         """
         Validate a GitHub Access Token.
         """
@@ -26,7 +26,7 @@ class VSCode:
             return False
 
 
-    def locate_settings_file(self) -> Union[str, None]:
+    def locate_settings_file() -> Union[str, None]:
         """Locate the settings.json file and return it's contents."""
         # Default settings folder locations for different operating systems
         default_folders = {
@@ -51,7 +51,7 @@ class VSCode:
                     return content
         return None
         
-    def locate_keybinds_file(self) -> Union[str, None]:
+    def locate_keybinds_file() -> Union[str, None]:
         """Locate the keybindings.json and return it's contents."""
         # Default keybinds folder locations for different operating systems
         default_folders = {
@@ -76,7 +76,7 @@ class VSCode:
                     return content
         return None
 
-    def get_extension_info(self, extension_path: str) -> dict:
+    def get_extension_info(extension_path: str) -> dict:
         """Get information about a specific VSCode Extension."""
         fields_file_path = os.path.join(extension_path, "package.json")
         try:
@@ -132,7 +132,7 @@ class VSCode:
                 "categories": [],
             }
             
-    def extract_extensions_info(self) -> None:
+    def extract_extensions_info() -> None:
         """Extract the User's extensions and save them to the script's dir (extensions-list.json)"""
         extensions_folder = os.path.join(
             os.environ["HOME"], ".vscode", "extensions"
@@ -144,7 +144,7 @@ class VSCode:
                     extension_path = os.path.join(extensions_folder, extension_folder)
                     # Check if the entry in the folder is a directory (extension)
                     if os.path.isdir(extension_path):
-                        extension_info = self.get_extension_info(
+                        extension_info = VSCode.get_extension_info(
                             extension_path
                         )
                         extensions_info[extension_folder] = extension_info

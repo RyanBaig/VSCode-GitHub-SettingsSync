@@ -2,7 +2,7 @@ class Variables:
     """
     Base class for Environment Variable-related actions.
     """
-    def get_var(self, var_name: str) -> str:
+    def get_var(var_name: str) -> str:
         """
         Get the value of a variable from the `.env` file.
         """
@@ -12,7 +12,7 @@ class Variables:
                     value = line.split('=')[1].strip()
                     return value
 
-    def put_var(self, var_name: str, var_value: str) -> str:
+    def put_var(var_name: str, var_value: str) -> str:
         """
         Put a variable inside the .env` file.
         """
